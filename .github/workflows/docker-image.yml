@@ -45,7 +45,8 @@ jobs:
         # Set this to true to create the repository if it does not already exist
         create_repo: pythonapp
         # Set this to true to set a policy on the repository
-        set_repo_policy: false
+        set_repo_policy: true
+        repo_policy_file: repo-policy.json
         # Comma-separated string of ECR image tags
         tags: optional, default, latest
         # Name of Dockerfile to use
