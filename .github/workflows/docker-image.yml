@@ -25,3 +25,30 @@ jobs:
         push: false
         tags: user/app:latest
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+
+
+    - 
+      name: AWS ECR
+      # You may pin to the exact commit or the version.
+      # uses: kciter/aws-ecr-action@79255b7c5aa03dbf6d7c46cff2bfd049874cd98d
+      uses: kciter/aws-ecr-action@v4
+      with:
+        access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # AWS Account ID
+        account_id: jnankit41@gmail.com
+        # A role to assume under the account_id account.
+#         assume_role: # optional, default is 
+        # Name of your ECR repository
+#         repo: 
+        region: ap-south-1
+        # Set this to true to create the repository if it does not already exist
+        create_repo: pythonapp
+        # Set this to true to set a policy on the repository
+        set_repo_policy: false
+        # Comma-separated string of ECR image tags
+        tags: optional, default, latest
+        # Name of Dockerfile to use
+        dockerfile: Dockerfile
+        # Path to Dockerfile, defaults to the working directory
+        path: .
