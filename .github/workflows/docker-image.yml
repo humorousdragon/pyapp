@@ -41,7 +41,7 @@ jobs:
 #         assume_role: # optional, default is 
         # Name of your ECR repository
 #         repo: 
-        region: ap-south-1
+        region: ${{ secrets.AWS_REGION}}
         # Set this to true to create the repository if it does not already exist
         create_repo: pythonapp
         # Set this to true to set a policy on the repository
