@@ -5,7 +5,7 @@ FROM python:3.8-alpine
 # this line states the type of base image that will have the base environment to run the app. we are using 
 # official python image. it already has most of the tools and packages to run a python image.
 
-RUN mkdir /app
+# RUN mkdir /app
 WORKDIR /app 
 #  creating a working directory. Docker will use this directory/path as default for executing all the commands.
 # this command creates a relative path.it is short and easy to use.
