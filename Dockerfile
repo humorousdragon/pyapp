@@ -26,4 +26,4 @@ COPY python.py .
 # This command takes all the files from the source code directory and places em inside the image.
 # Now writing all the commands that we were supposed to run when our image is exectuted inside a container.
 
-CMD ["python", "python.py"]
+CMD ["python3", "python.py"]
