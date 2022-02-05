@@ -27,3 +27,8 @@ COPY python.py .
 # Now writing all the commands that we were supposed to run when our image is exectuted inside a container.
 
 CMD ["python3", "python.py"]
+
+
+
+
+
