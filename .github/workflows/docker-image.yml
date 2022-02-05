@@ -17,15 +17,6 @@ jobs:
       name: CHeckout
       uses: actions/checkout@v2
     
-    - 
-      name: Build the Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: false
-        tags: user/app:latest
-#       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
