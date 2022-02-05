@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
-FROM python:3.8-alpine
-# slim-buster 
+# FROM python:3.8-alpine
+FROM python:3.8-slim-buster 
 # this line states the type of base image that will have the base environment to run the app. we are using 
 # official python image. it already has most of the tools and packages to run a python image.
 
