@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: $ECR_REPOSITORY:$IMAGE_TAG
+  repository: $ECR_REGISTRY/$ECR_REPOSITORY
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: $IMAGE_TAG
 
 imagePullSecrets: []
 nameOverride: ""

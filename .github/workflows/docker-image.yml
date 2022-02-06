@@ -56,10 +56,13 @@ jobs:
     - name: helm install and deploy
       env: 
         KUBECONFIG: ${{secrets.KUBECONFIG}}
+        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REPOSITORY: docker-repo
+        IMAGE_TAG: ${{ github.sha }}
       run: |
          curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 > get_helm.sh
          chmod 700 get_helm.sh
          ./get_helm.sh
          echo $KUBECONFIG | base64 -di > ./config
          export KUBECONFIG=./config
-         helm install deepak ./pychart/
+         helm upgrade --install deepak ./pychart/
