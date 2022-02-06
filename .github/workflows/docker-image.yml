@@ -43,4 +43,5 @@ jobs:
     - name: helm install and deploy
       run: |
          ls .
+         helm version
          helm install deepak ./pychart/
