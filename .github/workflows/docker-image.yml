@@ -65,4 +65,5 @@ jobs:
          ./get_helm.sh
          echo $KUBECONFIG | base64 -di > ./config
          export KUBECONFIG=./config
-         helm upgrade --install deepak ./pychart/
+         helm upgrade --install deepak ./pychart/ --set image.tag=$IMAGE_TAG --set image.repository=$ECR_REGISTRY/$ECR_REPOSITORY
+         
