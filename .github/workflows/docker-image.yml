@@ -56,7 +56,7 @@ jobs:
     - name: helm install and deploy
       env: 
         KUBECONFIG: ${{secrets.KUBECONFIG}}
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        ECR_REGISTRY: 590532860066.dkr.ecr.ap-south-1.amazonaws.com
         ECR_REPOSITORY: docker-repo
         IMAGE_TAG: ${{ github.sha }}
       run: |
