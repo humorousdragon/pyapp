@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1URXlPREEyTVRJMU5Wb1hEVE14TVRFeU5qQTJNVEkxTlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTWlsClZCZDc1ZVFQeDNvMnV3VHlra2xnWkd5a1EzZW5ETmtYdHI0Z2piOGQxaitJandhZlZFaGtjNEMyU0lFNkdGdXkKWkxlWkcvNXJhbUZ6cHUzMU05bDg2T1VuMUZHN05nKytMVXFKWHE3QktsVDJ0QnEwSkl1bGhLMmsrUjR2ZEtYOApOMm1Kdk5VeG1KV1JPOGdaRDMwVDZwWmRlNHlxUjJpMWQ0TUhoSzNYTlVrYmN5eG5UTnVsejl0MitxalRiQVJTCnFUQkkydFQxbEJYZmpCME95Z3BLd0hvbzVhbU1oK0srYkx5WWppTUhrb0k0eVByMzVIdVV1Mml1K09jcUYrS1kKYno5MktKSjlMUG0zczBjYlU2TWlyeGVYQWlnb0RVRTBjeEtGTFYwbHBoN0VEOVBBZzVXdkl2NEIrdVlhSGkzegphRnZiOXlRWXA2Q2MrSHlKTys4Q0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZNQ1FmSlh4bk00WDVIZTJFMmZ2RkhZSGtVeVpNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFBVkYzVGpUSnFGcHBaMUZ1TWVKNG9DWllmVzN6cCsvblFaZHNtaS9ROVVURDFRem1scwp1OUtNWXZPMmwzbUY2eXFNbURwNXBwTUlNL0lwMlQxeExXb2tuY3hJY24veTRaTmNCOUxnTDV4VUJNRU9STVVmCko0YUVZMklpVS9qMUlCVzA3VVl3YXgxMkEyWXBzQWNCWlIvNXJRTXd5bXVrWXIrU21UZm83bDA4MkR5UXArTVIKYnNyZC9mVTFuUGJJTjBiL1VQWEZqMUMrK1BhSVM3VHdSZVoxcklVN0pzbSs0WGM5ZE5GOG1Ramg3OHN4WG9hTwpvUkJ5M0N2bm9DaStUU3FzTmpCemRCODF0aWhEMmdOYXM3OU4vZTlRN2VjS2hwbXpQSmRwWDlXRUQyakU2SWZoCm1pcmtWamNGVHdvdUg0cy9ZZzFzckhldjljbmc3TnhlMktydgotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://383CE4C2291A4905F4D3A750CF088DF2.gr7.ap-south-1.eks.amazonaws.com
+  name: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+contexts:
+- context:
+    cluster: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+    user: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+  name: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+current-context: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:ap-south-1:590532860066:cluster/appcluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - ap-south-1
+      - eks
+      - get-token
+      - --cluster-name
+      - appcluster
+      command: aws
